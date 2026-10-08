@@ -707,7 +707,7 @@ Public website should focus on Wally's role, reasoning, collaboration, decisions
 
 # 16. Awards & Recognition
 
-Deferred beyond v1 because the source list is unverified. Keep TODOs in internal content only; do not render placeholder awards, empty headings, or an awards navigation item. The model below is retained for future use.
+The homepage now includes a bilingual image-led Awards & Recognition strip sourced from the verified records in `src/data/awards.ts`. There is no standalone awards page. Records retain their category distinction, and temporary image placeholders are labeled in the card detail dialog until official certificate assets are supplied.
 
 ## Purpose
 
@@ -736,26 +736,11 @@ Award {
 }
 ```
 
-## Future Homepage (Not V1)
+## Homepage gallery (approved 2026-10-08)
 
-After verified award entries are available, show approximately 3–5 strongest awards / recognitions.
+Show all 11 supplied records in one image-led gallery; the three competitive awards appear first. There is no separate awards page or View All destination. See `docs/plans/2026-10-08-awards-design.md` for the approved interaction design; `src/data/awards.ts` defines the implemented `AwardRecord` type.
 
-If there are more, support:
-
-```txt
-View All Awards
-```
-
-## Award Card Fields
-
-At minimum:
-
-- award / ranking
-- event name
-- year / date
-- project name if relevant
-- Wally's role
-- short explanation
+Cards retain event name, year, category and exact result. Clicking opens a certificate/detail dialog with known issuer, project and brief context. Unknown roles, rankings and other fields are omitted. Nine temporary images have visible placeholder labels; FUTUREMODE and the Nantou Silver Award use their actual certificate images.
 
 ---
 

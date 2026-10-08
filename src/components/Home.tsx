@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { projects, siteCopy } from '@/data/content';
 import type { Locale } from '@/lib/types';
 import { Arrow } from './Arrow';
+import { AwardsGallery } from './AwardsGallery';
 import { BranchArt } from './BranchArt';
 import { DecisionReveal } from './DecisionReveal';
 import { Contact, Footer } from './Footer';
@@ -31,6 +32,7 @@ export function Home({ locale }: { locale: Locale }) {
         <div className="journey-grid"><div className="journey-intro"><h2 id="journey-heading">{t.journey.title}</h2><p>{t.journey.intro}</p><span className="journey-monogram" aria-hidden="true">w<span>/</span>h.</span></div><div className="journey-list"><div className="timeline-track" aria-hidden="true"><div className="timeline-progress"/></div>{t.journey.items.map((item,i) => <article className="journey-item" key={item.year}><span className="timeline-node" aria-hidden="true"/><div className="journey-year">{item.year}<span className="micro">0{i+1}</span></div><h3>{item.title}</h3><p>{item.body}</p><span className="micro journey-keywords">{item.keywords}</span></article>)}</div></div>
       </section>
       <section className="principles-section" id="about" aria-labelledby="principles-heading"><div className="page-width"><div className="section-label micro"><span>( 03 — {t.principles.eyebrow} )</span><span>THE WAY I WORK</span></div><div className="principles-grid"><div><h2 id="principles-heading">{t.principles.title}</h2><p className="principles-intro">{t.principles.intro}</p><div className="principles-art" aria-hidden="true">?<span>→</span>!</div></div><div className="principles-list">{t.principles.items.map(item => <article className="principle" key={item.number}><span className="micro">{item.number}</span><div><h3>{item.title}</h3><p>{item.body}</p>{item.project && <Link href={`/${locale}/projects/${item.project}/`} className="principle-link">{t.principles.evidence}<Arrow/></Link>}</div></article>)}</div></div></div></section>
+      <AwardsGallery locale={locale}/>
       <Contact locale={locale}/>
     </main>
     <Footer locale={locale}/>
