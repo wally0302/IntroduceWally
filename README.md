@@ -28,8 +28,8 @@ node scripts/preview.mjs
 - 主要文案與作品內容在 [`src/data/content.ts`](src/data/content.ts)。
 - Email、LinkedIn 與履歷連結在 [`src/data/contact.ts`](src/data/contact.ts)；公開上線前請補齊履歷，目前履歷欄位仍待補。
 - 正式 canonical、sitemap 與分享網址需要設定 `NEXT_PUBLIC_SITE_URL`；在 Vercel 建置時也可使用 `VERCEL_PROJECT_PRODUCTION_URL` 作為正式網址來源。正式網址未設定前請視為本地預覽。
+- 後續開發的設計原則、內容邊界與最低檢查清單整理在 [`doc/DEVELOPMENT_NOTES.md`](doc/DEVELOPMENT_NOTES.md)。
 
 ## 字體授權
 
 字體由 `@fontsource-variable/host-grotesk` 與 `@fontsource-variable/noto-sans-tc` 提供。套件內的 OFL 授權已保留於 [`public/licenses`](public/licenses)：`host-grotesk-OFL.txt` 與 `noto-sans-tc-OFL.txt`。正式發佈前仍請核對授權與 NOTICE 文件，確認部署符合各字體授權條款。
-# IntroduceWally
