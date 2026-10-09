@@ -56,3 +56,17 @@
 - 桌面彈窗完整顯示直式獎狀；Escape 正常關閉。
 - 390px 手機彈窗圖片約 315 × 445px，保留 906:1280 比例；頁面無橫向溢出。
 - 桌面截圖：`artifacts/awards-portrait-dialog.jpg`。此輪已使用正式直式素材驗證，取代前述尚待直式素材的狀態。
+
+## AWS hackathon demo — 2026-10-09
+
+- GPT-5.6 Luna implemented the initial bilingual workspace and portfolio integration; parent review refined the appeal domain, full-width placement, state consistency, and source/export behavior.
+- Source frontend was cloned into `/tmp/wally-aws-hackathon-20261008` and started successfully on port 4174. Its stale npm lockfile required `npm install` in that temporary copy. Original case data requires `VITE_API_BASE`; no live AWS backend was connected.
+- Portfolio demo uses a fictional appeal, pre-written AI content and local state. Date differences are computed. Comparable prior cases are excluded from draft citations.
+- Final `npm run typecheck`, `npm test` (7 tests), `npm run build`, and `git diff --check` passed.
+- HTTP checks: root, two locale homepages and eight case routes returned 200, with unique IDs; 27 referenced internal pages/assets were available.
+- Browser checks: Chinese complete flow, source expansion by keyboard, selected-only draft references, editable draft invalidating export approval, notes included in downloaded TXT, source changes invalidating the old draft, keyboard date change recalculating and relocking later stages.
+- English flow: selected inspection record included, unselected illustrative rule excluded. Language switch preserved the case slug and `#interactive-demo` anchor.
+- English 320px and Chinese 390px demo layouts had no document overflow; Chinese homepage at 320px also had no overflow. Step navigation brings the next panel into view. Desktop layout reviewed.
+- Fixed existing waveform hydration rounding differences and declared smooth-scroll behavior for Next.js navigation. Fresh production homepage and AWS preview logs contained no errors/warnings.
+- Screenshots: `artifacts/aws-demo-desktop.jpg`, `artifacts/aws-demo-mobile.jpg`. Download content checked from the generated TXT (edited text + note + simulation label).
+- Local static preview: `http://127.0.0.1:4173/zh/projects/aws-hackathon/#interactive-demo`. No deployment performed. OS reduced-motion setting and physical devices were not exercised in this pass.

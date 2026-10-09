@@ -52,3 +52,27 @@
 5. 未來加入真實產品截圖時，維持匿名與機密邊界，並讓圖片補充故事，而不是取代文字證據。
 
 已完成的驗證紀錄見 `doc/IMPLEMENTATION_CHECK.md`；視覺決策與研究理由見 `doc/DESIGN_DIRECTION.md`。
+
+## Awards gallery
+
+首頁的 `Awards & Recognition` 位於 How I Work 之後、聯絡區之前，資料在 `src/data/awards.ts`。圖片目前集中使用 `public/awards/futuremode-sitcon-hackathon.jpeg` 作為暫用示意圖；替換正式素材時，更新對應 record 的 `image` 路徑，並將 `placeholder` 設為 `false`。FUTUREMODE X SITCON 已連接真實參賽證明，因此其 `placeholder` 為 `false`；其餘十筆維持 `true` 並在詳細資料中提示正式證書待補。不要為 OOTT 建立不存在的案例連結。
+
+
+替換素材的範例：將新檔案放到 `public/awards/ntue-2026.jpg`，在該筆資料改成 `image: '/awards/ntue-2026.jpg', placeholder: false`。圖片框和彈窗使用 `object-fit: contain`，不需依直橫方向修改樣式。現有圖片為橫式；未提供的直式原始獎狀仍待日後素材到齊時實際檢查。
+
+桌面動畫使用 requestAnimationFrame，以約 28px/s 移動，僅在桌面細指標、未啟用 reduced-motion、區塊可見且分頁可見時播放。使用者暫停、指標移入獎狀圖片（不含標題、文字與留白）、鍵盤焦點及彈窗開啟各自控制停止條件；手機僅手動滑動。循環副本從無障礙樹與 Tab 次序排除。
+
+## AWS hackathon interactive case
+
+新增作品 `aws-hackathon` 的來源為使用者提供的 https://github.com/wally0302/Aws_Hackathon 。作品集展示的是從原作抽出的互動導覽，以虛構案件和預編寫結果示範文件檢核、爭點比對、引用選擇與草稿編輯。不要把此版本描述成正在呼叫 Bedrock、檢索真實法規或提供法律判斷；不要補寫未確認的個人分工、競賽名次或使用成效。
+
+保留 Next.js 靜態輸出、中英路由與原有獎項修改。原作環境另在暫存副本啟動供參考，不將原作 node_modules、環境變數或後端依賴加入作品集。新增案例後，最低路由檢查擴充為八個案例頁。
+
+
+### 直式獎狀更新（2026-10-08）
+
+南投縣 2023 山城數位黑客松競賽「銀獎」已換成使用者提供的正式 JPEG：`public/awards/nantou-digital-hackathon-2023-silver.jpeg`（906 × 1280），並移除該筆 placeholder 標記。現在有 2 筆正式圖片、9 筆暫代圖片；此更新取代前述素材待補數量與直式素材尚缺的描述。
+
+圖片資料可加上 `imageSize: { width: 906, height: 1280 }`；沒有指定時使用既有橫式暫代圖的 1930 × 1364。桌面採同高、依比例調整寬度的直橫混排；手機卡片固定可閱讀的寬度，直式圖片按原比例增高。直式彈窗在桌面為圖片／文字雙欄，手機為上下堆疊與內部捲動，關閉按鈕固定在彈窗外框內。前後控制依實際卡片位置移動，支援不同寬度。
+
+AWS demo 的主要畫面在 `src/components/AwsCaseDemo.tsx`；日期計算、引用過濾與 TXT 輸出在 `src/lib/appeal-demo.ts`，資料邊界測試在 `src/lib/appeal-demo.test.ts`。本頁的相似前例僅供比對，不允許當作引用依據。修改日期會重設後續步驟；修改引用會清除草稿；編輯草稿或備註會要求重新確認匯出。首頁及案例內容仍由 `src/data/content.ts` 管理。

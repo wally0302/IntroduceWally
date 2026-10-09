@@ -71,7 +71,7 @@ Unless explicitly requested later.
 
 ## 2.1.1 Current implementation status
 
-The current implementation is a Next.js static-export bilingual site with `/zh`, `/en`, and three project routes: PitchCue, KeFu, and the voting-system case. It includes the approved editorial prototype direction, the product/decision reveal interaction, GSAP/ScrollTrigger journey motion, and the three case demos: PitchCue answer formats, KeFu AI-to-human handoff scenarios, and voting-system need/feature/guide steps.
+The current implementation is a Next.js static-export bilingual site with `/zh`, `/en`, and four project routes: PitchCue, KeFu, the voting-system case, and the AWS hackathon appeal-review assistant. It includes the approved editorial prototype direction, the product/decision reveal interaction, GSAP/ScrollTrigger journey motion, and case demos for PitchCue answer formats, KeFu AI-to-human handoff scenarios, voting-system need/feature/guide steps, and an embedded AWS appeal-review workflow using fictional data.
 
 The contact section currently reads the email and LinkedIn values from `src/data/contact.ts`. The resume value is still empty and must be supplied before public launch. The site has not been deployed; browser, device, and performance validation remain pending and must not be treated as completed acceptance checks.
 

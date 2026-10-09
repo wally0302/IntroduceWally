@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import type { Locale, ProjectSlug } from '../lib/types';
 import './case-demo.css';
+import { AwsCaseDemo } from './AwsCaseDemo';
 
 type PitchMode = 'signals' | 'spoken';
 type KefuMode = 'faq' | 'handoff';
@@ -141,6 +142,8 @@ export function CaseDemo({ slug, locale }: { slug: ProjectSlug; locale: Locale }
       </section>
     );
   }
+
+  if (slug === 'aws-hackathon') return <AwsCaseDemo locale={locale}/>;
 
   const steps: VotingStep[] = ['need', 'feature', 'handoff'];
   const stepIndex = steps.indexOf(votingStep);

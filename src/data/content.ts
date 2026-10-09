@@ -150,22 +150,22 @@ const pitchCue: Localized<ProjectCopy> = copy(
 
 const kefu: Localized<ProjectCopy> = copy(
   {
-    title: 'KeFu', question: 'AI 什麼時候，應該先停下來？', summary: '為微型商家與一人公司探索的 24 小時數位營運夥伴，重點是知識、信心與真人交接。', category: 'AI Product · AI Agent · 0→1', status: '已有第一位客戶／持續探索', role: '產品方向與 AI workflow 探索', theme: '設計 AI 的邊界',
+    title: 'KeFu', question: 'AI 什麼時候，應該先停下來？', summary: '為微型商家與一人公司探索的數位營運夥伴，從 FAQ、對話回覆與真人交接整理重複客服工作。', category: 'AI Product · AI Agent · 0→1', status: '已有第一位客戶／持續探索', role: '產品方向與 AI workflow 探索', theme: '設計 AI 的邊界',
     insights: ['小型商家需要的是少一點重複營運，而不是更多工具複雜度。', '知識設計與品牌語氣會影響回答能否被信任。', '資訊不足時，真人交接是產品能力的一部分。'], takeaway: 'AI 產品的責任不只在回答，也在知道何時需要更多資訊、何時應該交還控制權。',
     sections: [
-      { id: 'context', eyebrow: 'Context', title: '從重複訊息開始', body: ['KeFu 面向微型商家、個人事業與小型服務業，探索如何處理重複客戶問題。', '方向包含 FAQ、商品知識、AI 對話與每週分析，讓營運者少花時間在反覆整理上。'] },
+      { id: 'context', eyebrow: 'Context', title: '從重複訊息開始', body: ['KeFu 面向微型商家、個人事業與小型服務業，探索如何處理重複客戶問題。', '方向包含 FAQ、商品知識、AI 對話與對話分析，讓營運者少花時間在反覆整理上。'] },
       { id: 'tension', eyebrow: 'Tension', title: '回答與信任之間', body: ['自動化不代表所有問題都該由 AI 自己完成。資訊不足、風險升高或語氣不確定時，系統需要承認邊界。'], points: ['知識是否足夠', '回答是否可信', '何時交給真人'] },
-      { id: 'direction', eyebrow: 'Direction', title: '把交接設計進流程', body: ['產品方向探索 confidence／risk-based handoff、Root Agent tone 與 forbidden words。', '重點是讓回答範圍、待確認資訊與真人接手成為同一個流程。'] },
+      { id: 'direction', eyebrow: 'Direction', title: '從修正回覆，到修正知識', body: ['原專案的收件匣支援 AI 草稿審核：商家可以編輯、發送或捨棄，也能接手需要人工確認的對話。', '真人修改可作為 FAQ 修正建議的來源，經商家審核採納後再更新知識。上方 demo 將這段流程濃縮成可操作的前端模擬。'] },
       { id: 'boundary', eyebrow: 'Boundary', title: '持續面對的問題', body: ['KeFu 目前已有第一位客戶並持續探索，案例聚焦知識設計、AI 可靠性與小型商家營運。', '同時仍要面對差異化、AI 平台吸收功能與可累積護城河的問題。'] },
     ],
   },
   {
-    title: 'KeFu', question: 'When should an AI stop and ask for help?', summary: 'A 24-hour digital operations partner explored for micro-businesses and solo founders, built around knowledge, confidence, and human handoff.', category: 'AI Product · AI Agent · 0→1', status: 'First customer / ongoing exploration', role: 'Product direction and AI workflow exploration', theme: 'Designing the boundary of AI',
+    title: 'KeFu', question: 'When should an AI stop and ask for help?', summary: 'A digital operations partner explored for micro-businesses and solo founders, organizing FAQ, conversation replies, and human handoff around repetitive support work.', category: 'AI Product · AI Agent · 0→1', status: 'First customer / ongoing exploration', role: 'Product direction and AI workflow exploration', theme: 'Designing the boundary of AI',
     insights: ['Small businesses need less repetitive operations, not more tool complexity.', 'Knowledge design and brand tone shape whether an answer can be trusted.', 'When context is missing, human handoff is part of the product.'], takeaway: 'An AI product is responsible for knowing when it needs more context and when control should return to a person.',
     sections: [
-      { id: 'context', eyebrow: 'Context', title: 'Start with repetitive conversations', body: ['KeFu is explored for micro-businesses, solo founders, and small service businesses facing repeated customer questions.', 'The direction includes FAQ and product knowledge, AI conversations, and weekly analysis to reduce routine operations.'] },
+      { id: 'context', eyebrow: 'Context', title: 'Start with repetitive conversations', body: ['KeFu is explored for micro-businesses, solo founders, and small service businesses facing repeated customer questions.', 'The direction includes FAQ and product knowledge, AI conversations, and conversation analysis to reduce routine operations.'] },
       { id: 'tension', eyebrow: 'Tension', title: 'Between an answer and trust', body: ['Automation does not mean every question should be completed by AI. Missing context, higher risk, or uncertain tone should expose the boundary.'], points: ['Is the knowledge enough?', 'Can the answer be trusted?', 'When should a person take over?'] },
-      { id: 'direction', eyebrow: 'Direction', title: 'Design handoff into the flow', body: ['The product exploration considers confidence- and risk-based handoff, Root Agent tone, and forbidden words.', 'The focus is to make answer boundaries, missing context, and human takeover part of one flow.'] },
+      { id: 'direction', eyebrow: 'Direction', title: 'From correcting a reply to correcting knowledge', body: ['The source project supports AI draft review in its inbox: merchants can edit, send, or discard drafts and take over conversations that need human judgment.', 'Human edits can inform FAQ correction proposals, which merchants review before updating knowledge. The demo above condenses this workflow into a local frontend simulation.'] },
       { id: 'boundary', eyebrow: 'Boundary', title: 'Questions still open', body: ['KeFu has a first customer and remains in exploration, with the case focused on knowledge design, AI reliability, and small-business operations.', 'The work still faces questions about differentiation, platform absorption, and a compounding moat.'] },
     ],
   },
@@ -194,10 +194,34 @@ const voting: Localized<ProjectCopy> = copy(
   },
 );
 
+const awsHackathon: Localized<ProjectCopy> = copy(
+  {
+    title: '訴願案件助審系統', question: '案件助審，如何把判斷留在人手上？', summary: 'AWS Hackathon 原型：以 Bedrock、OpenSearch 與 Lambda 串起文件檢查、來源整理與草稿輔助。', category: 'AWS Hackathon · AI Workflow', status: '黑客松原型／作品集互動版', role: '黑客松專案參與者', theme: '讓 AI 輸出可被檢查',
+    insights: ['規則檢查、AI 建議與人工確認要分開。', '來源選擇應該是可見的產品決定。', '草稿只能使用人選定的來源。'], takeaway: '好的 AI workflow 不只產生內容，也讓人知道內容從哪裡來、還需要確認什麼。',
+    sections: [
+      { id: 'context', eyebrow: 'Context', title: '把訴願審查步驟放進同一個工作區', body: ['訴願案件助審系統把案件文件、程序檢查、可追溯來源與草稿輔助放在同一個流程裡，使用 Amazon Bedrock、OpenSearch 與 Lambda 串接。', '原作包含文件檢核、爭點整理、法規與前例檢索、草稿生成及匯出五個階段，每一階段都保留承辦人的確認。'] },
+      { id: 'tension', eyebrow: 'Tension', title: '可追溯，比看起來聰明更重要', body: ['當系統提出建議時，使用者需要知道哪些是固定規則、哪些是 AI 的整理，以及哪些地方仍要自己確認。'], points: ['程式檢核', 'AI 整理', '承辦人確認'] },
+      { id: 'direction', eyebrow: 'Direction', title: '用來源選擇控制最後一段輸出', body: ['工作區讓使用者逐步鎖定支援片段，再用選定來源產生預編寫草稿。', '修改文件或來源後，後續確認會失效，避免沿用過期判斷。'] },
+      { id: 'boundary', eyebrow: 'Boundary', title: '把原型的重要操作帶進作品集', body: ['這裡將原作濃縮為四個操作畫面，使用虛構案件與預編寫輸出，讓訪客直接體驗審查流程。', '原專案以 Bedrock 協助整理與撰寫、OpenSearch 檢索資料、Lambda 執行流程；本頁的展示在瀏覽器內完成。'] },
+    ],
+  },
+  {
+    title: 'Appeal Review Assistant', question: 'How can case assistance keep judgment with the person?', summary: 'An AWS Hackathon prototype connecting Bedrock, OpenSearch, and Lambda for document checks, source tracing, and draft assistance.', category: 'AWS Hackathon · AI Workflow', status: 'Hackathon prototype / portfolio interactive', role: 'Hackathon project participant', theme: 'Make AI output inspectable',
+    insights: ['Separate rule checks, AI suggestions, and human confirmation.', 'Make source selection visible as a product decision.', 'Let the draft use only sources the person selected.'], takeaway: 'A good AI workflow does more than generate content: it shows where the content came from and what still needs a person’s confirmation.',
+    sections: [
+      { id: 'context', eyebrow: 'Context', title: 'Put appeal review steps in one workspace', body: ['The Appeal Review Assistant keeps the case document, procedure checks, traceable sources, and draft assistance in one connected flow. Its architecture uses Amazon Bedrock, OpenSearch, and Lambda.', 'The original has five stages: document checks, issue mapping, law and precedent retrieval, draft generation, and export. Each stage keeps a human confirmation step.'] },
+      { id: 'tension', eyebrow: 'Tension', title: 'Traceability matters more than looking clever', body: ['When a system suggests a direction, people need to see what is a fixed rule, what has been organized by AI, and what still needs their confirmation.'], points: ['Rule checks', 'AI suggestions', 'Human confirmation'] },
+      { id: 'direction', eyebrow: 'Direction', title: 'Use source selection to control the final output', body: ['The workspace lets a person lock supporting snippets before generating a pre-written draft from those selections.', 'Changing the document or sources invalidates later confirmations so an old judgment cannot quietly carry forward.'] },
+      { id: 'boundary', eyebrow: 'Boundary', title: 'Bring the prototype into the portfolio', body: ['Four focused screens use a fictional case and pre-written outputs so visitors can experience the review process themselves.', 'The source project uses Bedrock for organization and drafting, OpenSearch for retrieval, and Lambda for workflow execution. This portfolio demo runs in the browser.'] },
+    ],
+  },
+);
+
 export const projects: Project[] = [
   { slug: 'pitchcue', number: '01', visibility: 'public', accent: '#2848dd', copy: pitchCue },
   { slug: 'kefu', number: '02', visibility: 'public', accent: '#28584c', copy: kefu },
   { slug: 'voting-system', number: '03', visibility: 'anonymized', accent: '#a34b32', copy: voting },
+  { slug: 'aws-hackathon', number: '04', visibility: 'public', accent: '#183b63', copy: awsHackathon },
 ];
 
 export const getProject = (slug: string): Project | undefined => projects.find((project) => project.slug === slug);

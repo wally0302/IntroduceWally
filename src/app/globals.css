@@ -67,6 +67,8 @@ svg{display:block}
 .project-story h3{font-weight:530;font-size:clamp(26px,2.65vw,39px);line-height:1.4;letter-spacing:-.045em;text-wrap:pretty}
 .project-summary{font-size:15px;line-height:1.8;margin:22px 0 24px;color:#4e504a;max-width:33ch}
 .project-link{margin-top:auto}
+.project-links{display:flex;flex-wrap:wrap;gap:8px 24px;margin-top:auto}
+.project-links .project-link{margin-top:0}
 .project-category{color:var(--muted);margin-top:22px;font-size:9px}
 .awards-section{--award-card-width:clamp(300px,32vw,480px);--award-image-height:calc(var(--award-card-width) / 1.42);padding:85px 0 90px;overflow:hidden;scroll-margin-top:30px}
 .awards-heading-row{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;margin-bottom:38px}
@@ -257,3 +259,11 @@ svg{display:block}
 @media(max-width:380px){:root{--gutter:20px}.hero-name{font-size:23.4vw}.hero-meta>span:last-child{max-width:95px}.hero-intro-copy{max-width:100%}.hero-statement{font-size:28px}.hero-ctas{gap:20px}.project-story h3{font-size:27px}.reveal-stage{--stage-ratio:1.2}.mode-thinking .reveal-thinking{padding:20px}.mode-thinking .reveal-thinking li{padding:10px 0}.reveal-thinking>.micro{font-size:7px}.contact-grid h2{font-size:27px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.branch-art{clip-path:none!important}.timeline-progress{transform:none!important}}
 @media print{.site-header,.hero-ctas,.reveal-toolbar,.case-toc,.site-footer,.branch-art{display:none}.page-width{width:100%}.site{background:white;color:black}.project-chapter,.journey-grid,.principles-grid,.case-body{display:block}.project-chapter,.story-section{break-inside:avoid}.project-story{padding:15px 0;border:0}.principles-section{color:black;background:white}.reveal-cover{mask-image:none}.contact-section{padding-top:30px}.journey-monogram{display:none}}
+
+/* A working product takes the place of the AWS case's illustrative cover. */
+.case-demo-intro{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;border-top:1px solid var(--line);padding-top:24px;margin-bottom:24px}
+.case-demo-intro p{margin:12px 0 0;font-size:clamp(18px,2vw,28px);line-height:1.5}
+.case-demo-intro>a{flex-shrink:0;font-size:13px}
+.case-live-demo .aws-workspace{margin-top:0;scroll-margin-top:105px}
+.reveal-aws-hackathon .cover-title{white-space:normal;font-size:clamp(32px,4.5vw,70px);line-height:1.12;letter-spacing:-.045em}
+@media(max-width:650px){.case-demo-intro{align-items:flex-start;flex-direction:column;gap:16px}.reveal-aws-hackathon .cover-title{font-size:clamp(32px,8vw,52px)}}

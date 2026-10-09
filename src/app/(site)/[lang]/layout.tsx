@@ -11,5 +11,5 @@ export const dynamicParams = false;
 export default async function LocaleLayout({ children, params }: { children: React.ReactNode; params: Promise<{ lang: string }> }) {
   const { lang } = await params;
   if (!isLocale(lang)) notFound();
-  return <html lang={lang === 'zh' ? 'zh-Hant' : 'en'}><body>{children}</body></html>;
+  return <html data-scroll-behavior="smooth" lang={lang === 'zh' ? 'zh-Hant' : 'en'}><body>{children}</body></html>;
 }

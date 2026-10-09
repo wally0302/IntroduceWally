@@ -1112,3 +1112,11 @@ Current differentiation:
 > Product judgment + strong execution curiosity + AI-native working style.
 
 The website should prove this through actual career progression and project case studies rather than simply state it.
+
+## AWS hackathon — user-provided source (2026-10-08)
+
+- User identifies this as another personal portfolio project and supplied https://github.com/wally0302/Aws_Hackathon .
+- Repository title: 訴願案件助審系統 (Appeal Case Review Assistant), New Taipei City AI hackathon legal affairs challenge.
+- Repository documents a five-stage, human-confirmed review workflow and AWS architecture. These describe the source project, not live capabilities of the portfolio simulation.
+- Portfolio request: show key interactive frontend demo screens using mock data; no backend required.
+- Individual responsibilities, award placement and production adoption for this project are not established by this request. Avoid inventing them.
