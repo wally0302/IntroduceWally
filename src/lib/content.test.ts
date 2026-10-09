@@ -22,7 +22,7 @@ describe('portfolio content contract', () => {
   it('keeps project identities independent and localized', () => {
     const slugs = projects.map((project) => project.slug);
     expect(new Set(slugs).size).toBe(slugs.length);
-    expect(slugs).toEqual(['pitchcue', 'kefu', 'voting-system', 'aws-hackathon']);
+    expect(slugs).toEqual(['pitchcue', 'kefu', 'voting-system', 'aws-hackathon', 'ai-restaurant', 'beachcomber', 'oott']);
 
     for (const project of projects) {
       expect(project.copy.zh.title).toBeTruthy();

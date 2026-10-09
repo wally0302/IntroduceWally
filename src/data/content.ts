@@ -1,3 +1,5 @@
+import { oottCopy } from './oott';
+import { beachcomberCopy } from './beachcomber';
 import type { Localized, Project, ProjectCopy, SiteCopy } from '../lib/types';
 
 export const siteCopy: Localized<SiteCopy> = {
@@ -217,11 +219,45 @@ const awsHackathon: Localized<ProjectCopy> = copy(
   },
 );
 
+const restaurant: Localized<ProjectCopy> = copy(
+  {
+    title: '揪甘心', question: '從「想揪」到「成團」，中間卡住了什麼？', summary: '從多人時間協調出發，探索主揪與朋友的不同需求、MVP 取捨，以及成團後的餐廳決策。', category: 'Group Planning & Coordination', status: '靜態原型 / 產品假設待驗證', role: '參與產品與原型設計', theme: '先完成使用者的任務，再探索長期價值',
+    insights: ['主揪需要管理能力，朋友需要低門檻參與。', '系統彙整時間，主揪保留最後決定。', '成團訊號不等於消費成果；每個假設都需要驗證。'], takeaway: '從一個生活問題出發，判斷什麼值得做，也定義如何知道判斷是否成立。',
+    sections: [
+      { id: 'gather-problem', eyebrow: 'The problem', title: '為什麼要做？', body: ['先理解聚會從發起到定案的完整旅程。'] },
+      { id: 'gather-users', eyebrow: 'The users', title: '為什麼先服務主揪？', body: ['聚焦高頻主揪，同時降低朋友參與的成本。'] },
+      { id: 'gather-decisions', eyebrow: 'The product decisions', title: '為什麼這樣設計？', body: ['將核心決策與價值、代價和驗證方法放在一起。'] },
+      { id: 'gather-data', eyebrow: 'The data strategy', title: '需求訊號如何形成價值？', body: ['先區分操作、意向與真實消費，再討論資料用途。'] },
+      { id: 'gather-business', eyebrow: 'The business model', title: '免費之後，如何驗證商業模式？', body: ['使用者需求、商家付費與單位經濟需要分別驗證。'] },
+      { id: 'gather-execution', eyebrow: 'The execution', title: '資源減少時，保住什麼？', body: ['以核心成團流程作為取捨依據。'] },
+      { id: 'gather-validation', eyebrow: 'The validation', title: '如何知道判斷成立？', body: ['把可操作的原型與真實產品成效分開。'] },
+      { id: 'gather-reflection', eyebrow: 'The reflection', title: '能帶給下一個團隊什麼？', body: ['將具體決策轉成可遷移的產品工作方法。'] },
+    ],
+  },
+  {
+    title: 'GatherTime', question: 'What gets in the way between “let’s meet” and a confirmed plan?', summary: 'Start with group scheduling to explore asymmetric roles, MVP trade-offs and restaurant decisions after the group has a plan.', category: 'Group Planning & Coordination', status: 'Static prototype / hypotheses unvalidated', role: 'Product and prototype contributor', theme: 'Complete the user’s job before pursuing long-term value',
+    insights: ['Hosts need management; friends need a low-friction way to reply.', 'The system organizes availability; the host makes the call.', 'A confirmed plan is not a purchase. Each hypothesis needs evidence.'], takeaway: 'Start with an everyday problem, decide what deserves to be built, and define how to tell whether that decision holds.',
+    sections: [
+      { id: 'gather-problem', eyebrow: 'The problem', title: 'Why this problem?', body: ['Understand the full journey from invitation to a confirmed plan.'] },
+      { id: 'gather-users', eyebrow: 'The users', title: 'Why frequent hosts first?', body: ['Focus on hosts while reducing the cost for invited friends.'] },
+      { id: 'gather-decisions', eyebrow: 'The product decisions', title: 'Why these choices?', body: ['Connect each decision to value, costs and validation.'] },
+      { id: 'gather-data', eyebrow: 'The data strategy', title: 'When do demand signals become useful?', body: ['Distinguish actions, intent and actual purchases before pursuing data value.'] },
+      { id: 'gather-business', eyebrow: 'The business model', title: 'What must be true for a free tool to earn revenue?', body: ['Test user need, merchant payment and unit economics separately.'] },
+      { id: 'gather-execution', eyebrow: 'The execution', title: 'What survives a resource constraint?', body: ['Protect the core coordination workflow first.'] },
+      { id: 'gather-validation', eyebrow: 'The validation', title: 'How would we know the decisions work?', body: ['Separate an operable prototype from real product outcomes.'] },
+      { id: 'gather-reflection', eyebrow: 'The reflection', title: 'What carries into the next team?', body: ['Turn specific decisions into transferable product methods.'] },
+    ],
+  },
+);
+
 export const projects: Project[] = [
   { slug: 'pitchcue', number: '01', visibility: 'public', accent: '#2848dd', copy: pitchCue },
   { slug: 'kefu', number: '02', visibility: 'public', accent: '#28584c', copy: kefu },
   { slug: 'voting-system', number: '03', visibility: 'anonymized', accent: '#a34b32', copy: voting },
   { slug: 'aws-hackathon', number: '04', visibility: 'public', accent: '#183b63', copy: awsHackathon },
+  { slug: 'ai-restaurant', number: '05', visibility: 'public', accent: '#28584c', copy: restaurant },
+  { slug: 'beachcomber', number: '06', visibility: 'public', accent: '#2848dd', copy: beachcomberCopy },
+  { slug: 'oott', number: '07', visibility: 'public', accent: '#4d5746', copy: oottCopy },
 ];
 
 export const getProject = (slug: string): Project | undefined => projects.find((project) => project.slug === slug);

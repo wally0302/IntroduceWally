@@ -1,7 +1,7 @@
 export const locales = ['zh', 'en'] as const;
 export type Locale = (typeof locales)[number];
 export type Localized<T> = Record<Locale, T>;
-export type ProjectSlug = 'pitchcue' | 'kefu' | 'voting-system' | 'aws-hackathon';
+export type ProjectSlug = 'pitchcue' | 'kefu' | 'voting-system' | 'aws-hackathon' | 'ai-restaurant' | 'beachcomber' | 'oott';
 
 export interface StorySection {
   id: string;
